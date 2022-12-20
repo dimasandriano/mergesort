@@ -48,6 +48,7 @@ btnReset.addEventListener('click', () => {
     data = []
     listData.textContent =''
     listDataSort.textContent =''
+    datas = ''
 })
 
 
