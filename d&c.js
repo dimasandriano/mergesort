@@ -8,14 +8,15 @@ const listDataSort = document.getElementById("listDataSort")
 
 // variabel data
 let data = [];
+const nim = 201044100;
 
 
 // event click btn input
 btnInput.addEventListener('click', function() {
     if(input.value == '' ) return alert('masukkan angka')
-    data.push(parseInt(input.value))
+    data.push(parseInt(nim+input.value))
     listData.innerHTML += `
-            <li class="list-group-item">${input.value}</li>
+            <li class="list-group-item">${nim}${input.value}</li>
         `
     input.value = '';
 })
@@ -24,9 +25,9 @@ btnInput.addEventListener('click', function() {
 input.addEventListener('keypress', function(e) {
     if(e.key === 'Enter'){
         if(input.value == '' ) return alert('masukkan angka')
-        data.push(parseInt(input.value))
+        data.push(parseInt(nim+input.value))
         listData.innerHTML += `
-            <li class="list-group-item">${input.value}</li>
+            <li class="list-group-item">${nim}${input.value}</li>
         `
         input.value = '';
     }
@@ -70,10 +71,10 @@ function merge(A, B) {
 
 // function merge sort
 function sort(data) {
-    if (data.length <= 1) return data;
+    if (data.length <= 1) return datas = data;
     if (data.length === 2) {
-        if (data[0] < data[1]) return data;
-        return [data[1], data[0]];
+        if (data[0] < data[1]) return datas = data;
+        return datas = [data[1], data[0]];
     }
     const mid = Math.floor(data.length/2);
     const left = data.slice(0, mid);
